@@ -235,7 +235,7 @@ export const popuTemplate = {
 };
 
 const colorStatus = [
-  [225, 225, 225], // To be Constructed (white)
+  [225, 225, 225, 0.1], // To be Constructed (white)
   [130, 130, 130, 0.5], // Under Construction
   [255, 0, 0, 0.8], // Delayed
   [0, 112, 255, 0.8], // Completed

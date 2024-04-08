@@ -1,7 +1,7 @@
 {
   "homepage": "https://eijigorilla.github.io/s03b_station",
   "name": "s03b_station",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "dependencies": {
     "@amcharts/amcharts5": "^5.8.6",
