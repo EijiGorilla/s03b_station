@@ -180,7 +180,7 @@ stationLayer.listMode = 'hide';
 /* Building Scene Layer for station structures */
 export const buildingLayer = new BuildingSceneLayer({
   portalItem: {
-    id: 'af52086abc9d42c596d57d6fa1ea56bb',
+    id: 'b3555b42608f474e8f74e8baaa40885e',
     portal: {
       url: 'https://gis.railway-sector.com/portal',
     },
