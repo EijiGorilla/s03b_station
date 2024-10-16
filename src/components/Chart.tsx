@@ -26,6 +26,7 @@ import {
   thousands_separators,
   zoomToLayer,
 } from '../Query';
+import '@esri/calcite-components/dist/components/calcite-label';
 import { CalciteLabel } from '@esri/calcite-components-react';
 
 // Dispose function
@@ -348,29 +349,55 @@ const Chart = () => {
     };
   });
 
+  const primaryLabelColor = '#9ca3af';
+  const valueLabelColor = '#d1d5db';
+
   return (
     <>
-      <CalciteLabel
+      <div
         style={{
-          color: '#ffffff',
+          color: primaryLabelColor,
           fontSize: '1.3rem',
-          marginLeft: '4%',
+          marginLeft: '13px',
+          marginTop: '10px',
+          marginBottom: '-10px',
         }}
       >
-        TOTAL PROGRESS
-        <br />
-        <b className="totalProgressNumber">
+        Total Progress
+      </div>
+      <CalciteLabel layout="inline">
+        <div
+          style={{
+            color: valueLabelColor,
+            fontSize: '2.5rem',
+            fontWeight: 'bold',
+            fontFamily: 'calibri',
+            lineHeight: '1.2',
+            marginLeft: '30px',
+          }}
+        >
           {progress[2]} %
-          <img
-            src="https://EijiGorilla.github.io/Symbols/Station_Structures_icon.png"
-            alt="Utility Logo"
-            height={'55px'}
-            width={'55px'}
-            style={{ marginLeft: '40%', marginTop: '-5%' }}
-          />
-        </b>
-        <div className="totalProgressNumber2">({thousands_separators(progress[0])})</div>
+        </div>
+
+        <img
+          src="https://EijiGorilla.github.io/Symbols/Station_Structures_icon.png"
+          alt="Utility Logo"
+          height={'55px'}
+          width={'55px'}
+          style={{ marginLeft: '130px', display: 'flex' }}
+        />
       </CalciteLabel>
+      <div
+        style={{
+          color: valueLabelColor,
+          fontSize: '1rem',
+          fontFamily: 'calibri',
+          lineHeight: '1.2',
+          marginLeft: '30px',
+        }}
+      >
+        ({thousands_separators(progress[0])})
+      </div>
 
       <div
         id={chartID}
